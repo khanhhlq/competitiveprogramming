@@ -20,11 +20,11 @@ int main()
     {
         if (a[i] >= 0)
         {
-            duong = duong + 1;
+            duong++;
         }
         else
         {
-            am = am + 1;
+            am++;
         }
     }
 
