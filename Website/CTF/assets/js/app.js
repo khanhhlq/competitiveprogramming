@@ -11,7 +11,7 @@ main.addEventListener('submit', function () {
         `<div>Name: Luke</div>
         <span>Data: Xin chào tôi tên là Luke và tôi có nhiệm vụ là phải đi tìm bạn và đưa cho bạn một thứ này! Đó chính là mật mã mà bạn cần phải giải.
         <a href="https://www.mediafire.com/file/9w8vljqshqa4692/crypto.rar/file">
-            <p>Tải về</p>
+            <p>Tải về đi mày!</p>
         </a>
         </span>`;
         
