@@ -4,14 +4,11 @@ using namespace std;
 void nhap(int a[], int &n)
 {
     do
-    {
         cin >> n;
-    } while (n < 2 || n > 99);
+    while (n < 2 || n > 99);
 
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i <= n; i++)
         cin >> a[i];
-    }
 }
 
 int kiemtra(int k)
@@ -21,25 +18,17 @@ int kiemtra(int k)
     else
     {
         for (int i = 2; i <= k / 2; i++)
-        {
             if (k % i == 0)
-            {
                 return 0;
-            }
-            return 1;
-        }
+        return 1;
     }
 }
 
 void insonguyento(int a[], int n)
 {
     for (int i = 0; i < n; i++)
-    {
         if (kiemtra(a[i]))
-        {
             cout << a[i] << " ";
-        }
-    }
 }
 
 int main()
