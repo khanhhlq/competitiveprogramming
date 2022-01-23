@@ -19,15 +19,15 @@ int kiemtra(int k)
     {
         for (int i = 2; i <= k / 2; i++)
             if (k % i == 0)
-                return 0;
-        return 1;
+                return 0; // Trả về false
+        return 1;         // Trả về true
     }
 }
 
 void insonguyento(int a[], int n)
 {
     for (int i = 0; i < n; i++)
-        if (kiemtra(a[i]))
+        if (kiemtra(a[i])) // Nếu hàm kiemtra() trả về true thì in ra a[i]
             cout << a[i] << " ";
 }
 
