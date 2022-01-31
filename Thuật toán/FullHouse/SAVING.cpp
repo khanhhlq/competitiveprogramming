@@ -1,18 +1,18 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    int n, result = 0;
+    long n, s = 0;
     cin >> n;
     for (int i = 1; i <= n; i++)
     {
-        result = result + i;
-        if (result >= n)
+        s = s + i;
+        if (s >= n)
         {
             cout << i;
             break;
         }
     }
 }
+
+// Cac bị time out ở cái test case cuối :<
