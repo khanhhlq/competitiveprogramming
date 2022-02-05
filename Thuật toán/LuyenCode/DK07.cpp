@@ -8,26 +8,18 @@ int main()
     {
         cin >> a >> b >> c;
     } while (-1000 >= a, b, c >= 1000);
-
     denta = b * b - 4 * a * c;
-
     if (a == 0)
     {
         if (b == 0)
         {
             if (c == 0)
-            {
                 cout << "INF";
-            }
             else
-            {
                 cout << "NO";
-            }
         }
         else if (b != 0)
-        {
             cout << setprecision(2) << fixed << (float)(-c) / b;
-        }
     }
     else
     {
