@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    float a, b, c, denta, x1, x2;
+    int a, b, c, denta;
+    float x1, x2;
     do
     {
         cin >> a >> b >> c;
@@ -12,19 +13,28 @@ int main()
 
     if (a == 0)
     {
-        if (b == 0 && c == 0)
-            cout << "INF";
-        else if (b == 0 && c != 0)
-            cout << "NO";
-        else
-            cout << setprecision(2) << fixed << (float)-c / b;
+        if (b == 0)
+        {
+            if (c == 0)
+            {
+                cout << "INF";
+            }
+            else
+            {
+                cout << "NO";
+            }
+        }
+        else if (b != 0)
+        {
+            cout << setprecision(2) << fixed << (float)(-c) / b;
+        }
     }
-    else if (a != 0)
+    else
     {
         if (denta < 0)
             cout << "NO";
         else if (denta == 0)
-            cout << setprecision(2) << fixed << -b / (2 * a);
+            cout << setprecision(2) << fixed << (float)-b / (2 * a);
         else
         {
             x1 = (float)(-sqrt(denta) - b) / (2 * a);
