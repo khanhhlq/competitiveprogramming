@@ -1,13 +1,17 @@
 #include <math.h>
 #include <iostream>
 using namespace std;
+
+bool kiemtra(long long n)
+{
+    long long j = sqrt(n);
+    return (j * j == n);
+}
 int main()
 {
-    int n;
-    do
-        cin >> n;
-    while (n >= pow(10, 12));
-    if (n == sqrt(n) * sqrt(n))
+    long long n;
+    cin >> n;
+    if (kiemtra(n) == true)
         cout << "YES";
     else
         cout << "NO";

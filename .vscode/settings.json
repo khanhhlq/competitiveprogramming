@@ -42,5 +42,6 @@
     "iomanip": "cpp",
     "valarray": "cpp",
     "functional": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
 }
