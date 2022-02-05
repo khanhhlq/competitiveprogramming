@@ -13,9 +13,13 @@ int main()
         if (b == 0)
         {
             if (c == 0)
+            {
                 cout << "INF";
+            }
             else if (c != 0)
+            {
                 cout << "NO";
+            }
         }
         else if (b != 0)
         {
@@ -27,7 +31,9 @@ int main()
     {
         denta = b * b - 4 * a * c;
         if (denta < 0)
+        {
             cout << "NO";
+        }
         else if (denta == 0)
         {
             x = -b / (2 * a);
