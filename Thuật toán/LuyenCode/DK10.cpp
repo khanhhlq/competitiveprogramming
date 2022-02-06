@@ -12,7 +12,7 @@ int main()
 {
     int month, year;
     cin >> month >> year;
-    if ((month >= 1 || month <= 12) && (year > 0 || year <= 100000))
+    if ((month >= 1 && month <= 12) && (year > 0 && year <= 100000))
     {
         switch (month)
         {
@@ -40,6 +40,7 @@ int main()
             {
                 cout << "28";
             }
+            break;
         }
     }
     else
