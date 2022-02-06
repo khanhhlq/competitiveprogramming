@@ -1,16 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-
+int tohop(int k, int n)
 {
-    long long k, n, trung_gian, result = 1;
-    cin >> k >> n;
-    trung_gian = n - k;
-    for (int i = 1; i <= n; i++)
-        n *= i;
-    for (int i = 1; i <= k; i++)
-        k *= i;
-    for (int i = n; i <= (n - k); i++)
-        trung_gian *= 1;
-    cout << n / (k * (trung_gian));
+    if (k == n || k == 0)
+        return 1;
+    return tohop(k, n - 1) + tohop(k - 1, n - 1);
+}
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    cout << tohop(k, n);
 }
