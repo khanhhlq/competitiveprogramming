@@ -4,15 +4,17 @@ int main()
 {
     int n, dem = 0;
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    if (n <= 1)
     {
-        if (n % i == 0)
+        while (i <= trunc(sqrt(n)))
         {
-            dem++;
+            if (n % i == 0)
+                dem++;
+            i++
         }
     }
-    if (dem == 2)
-        cout << "YES";
     else
+    {
         cout << "NO";
+    }
 }
