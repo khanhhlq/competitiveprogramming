@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int giaithua(int gt)
+int giaithua(int n)
 {
-    gt = 1;
-    for (int i = 2; i <= gt; i++)
+    int gt = 1;
+    for (int i = 2; i <= n; i++)
         gt *= i;
     return gt;
 }
