@@ -11,7 +11,7 @@ int giaithua(int n)
 int main()
 {
     int n;
-    float x, sum = 0;
+    double x, sum = 0.0;
     do
     {
         cin >> x >> n;
