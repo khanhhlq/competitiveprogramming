@@ -9,13 +9,11 @@ int main()
     } while (abs(n) >= pow(10, 9));
 
     n = abs(n);
-    for (int i = n; i >= 1; i--)
-    {
-        if (n % i == 0)
-            result += i;
-    }
-    if (result == n)
-        cout << "YES";
+    if (n == 0)
+        cout << "INF";
     else
-        cout << "NO";
+        for (int i = n; i >= 1; i--)
+            if (n % i == 0)
+                cout
+                    << i << " ";
 }

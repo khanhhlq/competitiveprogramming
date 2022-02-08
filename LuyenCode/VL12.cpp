@@ -9,11 +9,9 @@ int main()
     } while (abs(n) >= pow(10, 4));
     n = abs(n);
     if (n == 0)
-        cout
-            << "INF";
+        cout << "INF";
     else
         for (int i = n; i >= 1; i--)
             if (n % i == 0)
-                cout
-                    << i << " ";
+                cout << i << " ";
 }
