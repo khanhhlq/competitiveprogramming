@@ -2,19 +2,23 @@
 using namespace std;
 int main()
 {
-    int n, dem = 0;
+    long long n, i = 1;
+    long int dem = 0;
     cin >> n;
     if (n <= 1)
+        cout << "NO";
+    else
     {
         while (i <= trunc(sqrt(n)))
         {
             if (n % i == 0)
                 dem++;
-            i++
+            i++;
         }
+        if (dem == 1)
+            cout << "YES";
+        else
+            cout << "NO";
     }
-    else
-    {
-        cout << "NO";
-    }
+    return 0;
 }
