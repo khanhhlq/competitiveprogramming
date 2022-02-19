@@ -18,10 +18,9 @@ int main()
         {
             int new_a = a;
             int new_b = b;
-            int tmp = a;
             while (b != 0)
             {
-                tmp = a % b;
+                int tmp = a % b;
                 a = b;
                 b = tmp;
             }
