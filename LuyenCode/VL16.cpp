@@ -3,6 +3,7 @@ using namespace std;
 
 int gcd(int a, int b)
 {
+
     if (a == 0 || b == 0)
         return a + b;
     while (a != b)
@@ -19,7 +20,8 @@ int main()
     {
         cin >> a >> b;
     } while (a * b != 0 && abs(a) >= 1000 && abs(b) >= 1000);
-
+    a = abs(a);
+    b = abs(b);
     int lcm = a * b / gcd(a, b);
     cout << lcm;
 }
