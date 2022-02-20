@@ -3,18 +3,30 @@ using namespace std;
 int main()
 {
     int n;
-    do
-    {
-        cin >> n;
-    } while (n <= 2 && n >= 10 ^ 6);
-    int arr[n];
+    cin >> n;
+    int arr[100001];
     for (int i = 0; i < n; i++)
         cin >> arr[i];
-    sort(arr + 1, arr + 1 + n);
+
+    int max = arr[0];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            int tg = arr[i];
+            if (arr[j] > arr[i])
+            {
+                arr[i] = arr[j];
+                arr[j] = tg;
+            }
+        }
+    }
+
+    int res = arr[0];
     int count = 0;
     for (int i = 1; i < n; i++)
     {
-        if (arr[0] == arr[i])
+        if (res == arr[i])
         {
             count++;
         }
@@ -23,6 +35,7 @@ int main()
             break;
         }
     }
+
     if (count == n - 1)
     {
         cout << "NOT FOUND";
@@ -31,4 +44,5 @@ int main()
     {
         cout << arr[count + 1];
     }
+    return 0;
 }
