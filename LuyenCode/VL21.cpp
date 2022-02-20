@@ -2,15 +2,20 @@
 using namespace std;
 int main()
 {
-    int n, x = 0;
-    cin >> n;
+    int id, n, x = 0;
+    do
+    {
+        cin >> n;
+    } while (n != 0 && n <= 5 && n >= pow(10, 9));
+
     for (int i = 1; i <= n; i++)
     {
-        if (x < n)
+        x += i;
+        if (x > n)
         {
-            x += i;
+            id = i - 1;
+            break;
         }
     }
-
-    cout << x;
+    cout << id;
 }
