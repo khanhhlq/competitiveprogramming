@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+
     int t, n[10001];
     do
     {
