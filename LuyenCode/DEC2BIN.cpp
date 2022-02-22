@@ -1,30 +1,23 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <math.h>
 
-int DEC2BIN(int n)
+long long Dec2Bin(int decimalNumber) // Ctrl H => find & replace
 {
-    if (n != 0)
+    long long binaryNumber = 0;
+    int p = 0;
+    while (decimalNumber > 0)
     {
-        DEC2BIN(n / 2);
-        cout << n % 2;
+        binaryNumber += (decimalNumber % 2) * pow(10, p);
+        ++p;
+        decimalNumber /= 2;
     }
+    return binaryNumber;
 }
 
 int main()
 {
-
-    int t, n[1000000];
-    do
-    {
-        cin >> t;
-
-    } while (t >= 1 && t >= pow(10, 5));
-
-    for (int i = 0; i < t; i++)
-        cin >> n[i];
-
-    for (int i = 0; i < t; i++)
-    {
-        cout << DEC2BIN(n[i]);
-    }
+    int decimalNumber;
+    printf("\nNhap so thap phan: ");
+    scanf("%d", &decimalNumber);
+    printf("Bin = %d", Dec2Bin(decimalNumber));
 }
