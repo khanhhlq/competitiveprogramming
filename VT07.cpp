@@ -10,18 +10,16 @@ int main()
             cin >> arr[i];
         } while (abs(arr[i] >= pow(10, 9)));
     }
-    int x, dem = 0;
+    int x, count = 0;
     cin >> x;
     for (int i = 0; i < 10; i++)
     {
         if (x == arr[i])
         {
             cout << i + 1 << ' ';
-            dem++;
+            count++;
         }
     }
-    if (dem == 0)
-    {
+    if (count == 0)
         cout << "-1";
-    }
 }
