@@ -13,5 +13,7 @@ int main()
         {
             cin >> arr[i];
         } while (arr[i] >= pow(10, 8));
+    for (int i = 0; i < n; i++)
+        if(arr[i] % )
     
 }
