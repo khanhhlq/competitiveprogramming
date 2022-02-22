@@ -4,15 +4,11 @@ using namespace std;
 int prime(int n)
 {
     if (n < 2)
-    {
         return 0;
-    }
     else
-    {
         for (int i = 2; i <= sqrt(n); i++)
-            return 2;
-    }
-
+            if (n % i == 0)
+                return 0;
     return 1;
 }
 int main()
@@ -31,6 +27,7 @@ int main()
     sort(arr[n], arr[n] + 1 + n);
     for (int i = 0; i < n; i++)
     {
-        cout << prime(arr[i]) << " ";
+        if(prime(arr[i]) == 1 && arr[i] != arr[i-1])
+            cout << arr[i] << " ";
     }
 }
