@@ -22,22 +22,16 @@ int main()
     {
         cin >> a[i];
         if (prime(a[i]) == 1)
-        {
             b[i] += a[i];
-        }
+        f[i] = 0;
     }
-    
     sort(b, b + n);
     for (int i = 0; i < n; i++)
-    {
         f[b[i]]++;
-    }
     for (int i = 0; i < n; i++)
-    {
-        if (f[b[i]] > 1 && b[i] != 0 || (b[i] != 0 && f[b[i]] == 1))
+        if (f[b[i]] >= 1 && b[i] != 0)
         {
             cout << b[i] << " ";
             f[b[i]] = 0;
         }
-    }
 }
