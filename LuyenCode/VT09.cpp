@@ -13,21 +13,31 @@ int prime(int n)
 }
 int main()
 {
-    int n;
+    int n, a[10000], f[10000], b[10000];
     do
     {
         cin >> n;
     } while (n >= pow(10, 4));
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        do
-        {
-            cin >> arr[i];
-        } while (arr[i] >= pow(10, 8));
-    sort(arr[n], arr[n] + 1 + n);
     for (int i = 0; i < n; i++)
     {
-        if(prime(arr[i]) == 1 && arr[i] != arr[i-1])
-            cout << arr[i] << " ";
+        cin >> a[i];
+        if (prime(a[i]) == 1)
+        {
+            b[i] += a[i];
+        }
+    }
+    
+    sort(b, b + n);
+    for (int i = 0; i < n; i++)
+    {
+        f[b[i]]++;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        if (f[b[i]] > 1 && b[i] != 0 || (b[i] != 0 && f[b[i]] == 1))
+        {
+            cout << b[i] << " ";
+            f[b[i]] = 0;
+        }
     }
 }
