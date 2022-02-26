@@ -29,9 +29,11 @@ int main()
     for (int i = 0; i < n; i++)
         f[b[i]]++;
     for (int i = 0; i < n; i++)
+    {
         if (f[b[i]] >= 1 && b[i] != 0)
         {
             cout << b[i] << " ";
             f[b[i]] = 0;
         }
+    }
 }
