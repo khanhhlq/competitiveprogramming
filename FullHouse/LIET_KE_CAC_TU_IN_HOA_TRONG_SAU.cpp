@@ -19,6 +19,6 @@ int main() {
     while (ptr != NULL){
         if (solution(ptr) == 1)
             cout << ptr << " ";
-        ptr = strtok(NULL, " ,");
+        ptr = strtok(NULL, " , ");
     }
 }
