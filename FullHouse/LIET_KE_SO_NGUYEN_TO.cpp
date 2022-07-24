@@ -8,7 +8,7 @@ void nhap(int a[], int &n)
         cin >> n;            // Nhập số nguyên n: tối ta của mảng a
     while (n < 2 || n > 99); // Nếu n nằm ngoài phạm vi này thì không nhận thêm n
 
-    for (int i = 0; i <= n; i++) // Nhập các phần tử vào mạng có giới hạn là n phần tử
+    for (int i = 0; i < n; i++) // Nhập các phần tử vào mạng có giới hạn là n phần tử
         cin >> a[i];
 }
 

@@ -1,35 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int checkData(int k){
-    if (k < 2){
-        return 0;
-    } else{
-        for (int i = 2; i <= k/2; i++){
-            if (k % 1 == 0){
-                return 0;
-            }
-        }
-        return 1;
-    }
-}
-
-int main(){
-    int n;
-
+void getData(int a[], int &n){
     do{
         cin >> n;
     } while (n <= 1 && n >= 10000);
     
-    int arr[n];
-    
-    for (int i = 0; i < n; i++){
-        cin >> arr[i];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+}
+
+int checkData(int k){
+    if (k < 2)
+        return 0; 
+    else{
+        for (int i = 2; i <= k/2; i++)
+            if (k % i == 0)
+                return 0;
+        return 1;
     }
 
-    for (int i = 0; i < n; i++){
-        if (checkData(arr[i])){
-            cout << arr[i] << " ";
-        }
-    }
+}
+
+void printData(int a[], int &n){
+    int count = 0;
+    for (int i = 0; i < n; i++)
+        if (checkData(a[i]))
+            count++;
+    cout << count;        
+}
+
+int main(){
+    int n;
+    int a[1000];
+    getData(a, n);
+    printData(a, n);
+    return 0;
 }
