@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
+struct ans{
+    int a, b;
+};
+
 int main()
 {
     int n;
