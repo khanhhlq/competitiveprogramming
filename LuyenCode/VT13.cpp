@@ -1,32 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 struct ans{
     int a, b;
 };
 
 int main()
 {
-    int n;
+    ans res;
+    int n, max = 0;
     cin >> n;
-    int a[n];
+    int a[10000];
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++){
         cin >> a[i];
+        if(a[i] + a[i - 1] >= max){max = a[i - 1] + a[i], res.a = a[i - 1], res.b = a[i];}
+    }
 
-    int max = a[0] + a[n - 1];
-    cout << max;
-    int sum = 0; 
-    int b[3];
-
-    for (int i = 0; i <= n - 2; i++){
-        sum = a[i] + a[i + 1];
-
-        if(sum > max){
-            max = sum;
-            b[0] = a[i];
-            b[1] = a[i + 1];
-            cout << b[0] << " " << b[1];
-        }
-    }   
+    if(a[1] + a[n] >= max ){
+        res.a = a[1], res.b = a[n];
+        if(res.a > res.b){cout << res.a << " " << res.b;} 
+        else{cout << res.b << " " << res.a;} 
+    } else{cout << res.a << " " << res.b;}
 }
