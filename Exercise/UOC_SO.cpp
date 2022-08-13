@@ -9,7 +9,7 @@ int main ()
     ll t, n, dem, ans = 1;
     cin >> t;
     ll arr[3];
-    ll phu = 1;
+
     
     while (t--)
     {
@@ -30,10 +30,7 @@ int main ()
             i++;
         }
         
-        arr[phu] = ans;
+        cout << ans << endl;
         ans = 1;
-        phu++;
     }
-    
-    cout << arr[1] << arr[2];
 }
