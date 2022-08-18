@@ -1,30 +1,17 @@
 #include <bits/stdc++.h>
+#include <algorithm>
 using namespace std;
+
 int main()
 {
-    int a, b;
-    do
-    {
-        cin >> a >> b;
-    } while (abs(a) >= 1000 && abs(b) >= 1000);
-
-    if (b == 0)
-        cout << "INVALID" << endl;
-    else
-    {
-        if (a % b == 0)
-            cout << a / b;
-        else
-        {
-            int new_a = a;
-            int new_b = b;
-            while (b != 0)
-            {
-                int tmp = a % b;
-                a = b;
-                b = tmp;
-            }
-            cout << new_a / a << " " << new_b / a;
-        }
-    }
+    long long n,a[10005];
+    cin>>n;
+    for (long long i=0; i<n; i++){cin>>a[i];}   
+    sort(a,a+n);
+    long long max1=a[0]*a[1]*a[2];
+    long long max2=a[n-1]*a[n-2]*a[n-3];
+    long long max3=a[n-1]*a[0]*a[1];
+    long long max0=max(max1,max2);
+    long long max4=max(max0, max3);
+    cout<<max4;
 }
