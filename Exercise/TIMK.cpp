@@ -5,6 +5,6 @@ int main(){
     int k=n;
     while(k++){
         a=log(k)/log(3);
-        if(pow(3,a) > n){cout<<a<<" "<<pow(3,a);break;}
+        if(pow(3,a)>n){cout<<a<<" "<<pow(3,a); break;}
     }
 }
