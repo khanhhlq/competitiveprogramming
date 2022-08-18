@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int a; cin>>a;
-    int hinhvuong=2*(pow(a,2)/2);
-    int hinhtron=2*(((3.14*a)/4)-hinhvuong);
-    cout <<"hv: " << hinhvuong;
-    cout <<"ht: " << hinhtron;
+    double a;cin>>a;
+    double hv=pow(a,2)/2;
+    double ht=(M_PI*pow(a,2))/4-hv;
+    cout<<setprecision(3)<<fixed<<2*hv+2*ht;
 }
