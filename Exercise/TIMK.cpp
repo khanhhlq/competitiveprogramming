@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int n,k=1; cin>>n;
-    int i=pow(3,k);
-    while(i<=n){k++;i=pow(3,k);}
-    cout << k << " "<< i << endl;
+    int n,a; cin>>n;
+    int k=n;
+    while(k++){
+        a=log(k)/log(3);
+        if(pow(3,a) > n){cout<<a<<" "<<pow(3,a);break;}
+    }
 }
