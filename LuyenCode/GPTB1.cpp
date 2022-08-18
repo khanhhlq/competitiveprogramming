@@ -9,6 +9,7 @@ int main(){
         double x,y;
         x=((double)(c*e-b*f))/((double)(a*e-b*d));
         y=((double)(c-a*x))/((double)(b));
+        // y=((double)(f-d*x))/((double)(e));
         cout<<setprecision(2)<<fixed<<x<<" "<<y;
     }
 }
