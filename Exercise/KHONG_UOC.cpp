@@ -4,7 +4,6 @@ using namespace std;
 int main(){
     long long n,ans=1,dem=0,i=2;
     cin>>n;
-    
     while(i<=n){
         if(n%i==0){
             dem++;
