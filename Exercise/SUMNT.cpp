@@ -1,38 +1,19 @@
-#include <tuple>
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
-int prime(ll p){
-    // if(n==2) return n;
-    // for(ll i = 3; i<=sqrt(n); i+=2) {
-    //     if(n%i == 0) break;
-    // }
-    // return n;
-    long long int a = 2;
-    if((long long int)(pow(a,p)-a)%(long long int)p==0){
-        return p;
-    }
-    return 0;
-
-}
 
 int main(){
-    ll n, ans=0; cin>>n;
-    for(ll i=2; i<=sqrt(n); i++){
-        if(n%i==0){
-            if(n/i!=i) ans+=prime(n/i)+prime(i);
-            else ans+=i;
-        }
+    ll n, i=2, ans=0; cin>>n;
+    while(i<=n){
+        if(n%i==0){ 
+            ans+=i;
+            while(n%i==0) n/=i;
+        } 
+        i++;
     }
-    cout << ans;
+    cout<<ans;
 }
-
-
-
     
-
-    
-
 
 
 // #include <bits/stdc++.h>
