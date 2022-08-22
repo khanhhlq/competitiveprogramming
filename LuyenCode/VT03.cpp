@@ -4,11 +4,7 @@ int main(){
     int n, m, k; cin>>n; int a[n];
     for (int i=0; i<n; i++){
         cin>>a[i];
-        if(i!=0){
-            m=max(a[i],a[i-1]);
-            if(m==a[i]) k=i;
-            else k=i-1;
-        }
+        if(i!=0){ m=max(a[i],a[i-1]); if(m==a[i]) k=i; else k=i-1; }
     }
     cout<<k;
 }
