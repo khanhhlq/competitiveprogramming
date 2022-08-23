@@ -7,13 +7,11 @@ int Fibonacci(int n)
     return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 int main(){
-    int n, dem=0; cin>>n;
-    vector<int> T;
-    for(int i=1; i<n; i++){
-        if(n%i==0){
-            dem++;
-            T.push_back(i);
-        }
+    int n, dem=0; cin>>n; int a[n];
+    a[0]=1; a[1]=1;
+    for(int i=2; i<n; i++){
+        a[i]=a[i-1]+a[i-2];
+        
     }
 
 }
